@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="consola.png" type="image/x-icon">
+    <title>Formulaire de Jeu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(255, 255, 255, 0.396);
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="email"] {
+            width: 100%; /* Prend toute la largeur disponible */
+            padding: 10px; /* Espace interne */
+            margin: 8px 0; /* Espacement vertical */
+            border: 2px solid #4CAF50; /* Bordure verte */
+            border-radius: 5px; /* Coins arrondis */
+            font-size: 16px; /* Taille de la police */
+        }
+
+        input[type="email"]:focus {
+            border-color: #66bb6a; /* Couleur de la bordure au focus */
+            box-shadow: 0 0 5px #66bb6a; /* Ombre au focus */
+        }
+        h1{
+            text-align: center;
+            color: red
+        }
+        .navbar {
+            text-align: left; 
+            margin-bottom: 20px; 
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; 
+        }
+
+        .navbar li {
+            display: inline;
+            margin: 0 40px; 
+        }
+
+        .navbar a {
+            color: #2980b9; /* Couleur des liens */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px; 
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: red; 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="allGames.html">Ver Juegos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="form-container">
+        <h1>Añadir un juego</h1>
+       <form action="https://docs.google.com/forms/d/e/1FAIpQLSfrhRq0NpQGlmw1t-8x8LyJTLjfOSxjdHTPjKBQpr4N7cza8w/formResponse" method="POST">
+        <label for="nombreDelJuego">Nombre del juego:</label>
+    <input type="text" id="nombreDelJuego" name="entry.1852792984" required><br>
+
+    <label for="genero">Género:</label>
+    <input type="text" id="genero" name="entry.1415145434" required><br>
+
+    <label for="fechaDeLanzamiento">Fecha de lanzamiento:</label>
+    <input type="date" id="fechaDeLanzamiento" name="entry.1832204510" required><br>
+
+    <label for="plataforma">Plataforma:</label>
+    <input type="text" id="plataforma" name="entry.981486917" required><br>
+
+    <label for="calificacion">Calificación:</label>
+    <input type="text" id="calificacion" name="entry.958413348" required><br>
+
+    <label for="email">Adresse e-mail:</label>
+    <input type="email" id="email" name="emailAddress" required><br>
+
+    <input type="submit" value="Envoyer">
+</form>
+
+    </div>
+</body>
+</html>

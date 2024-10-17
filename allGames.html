@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Juegos</title>
+    <link rel="icon" href="consola.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .navbar {
+            text-align: left;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 40px;
+        }
+
+        .navbar a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        .add-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+        }
+
+        .add-button:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="allGames.html">Ver Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+</nav>
+<a href="tableForm.html">
+    <button class="add-button">Añadir Videojuego a la Tabla</button>
+</a></header>
+    <h1>Lista de juegos registrados</h1>
+    <table id="gamesTable">
+        <thead>
+            <tr>
+                <th>Nombre del juego</th>
+                <th>Género</th>
+                <th>Fecha de lanzamiento</th>
+                <th>Plataforma</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos de los juegos se insertarán aquí -->
+        </tbody>
+    </table>
+    <script>
+        fetch('https://script.google.com/macros/s/AKfycbzAZpi7y08_7JmRmiBE4U5JgNahZsJ3HQBgHX6qjilf8-bhXazs4V9vETy-TILuFaykRg/exec')
+            .then(response => response.json())
+            .then(data => {
+                const gamesTable = document.getElementById('gamesTable').getElementsByTagName('tbody')[0];
+
+                // Limpiar las filas anteriores
+                gamesTable.innerHTML = '';
+
+                // Recorrer los datos
+                data.forEach((row) => {
+                    const newRow = gamesTable.insertRow();
+
+                    // Crear un enlace para el nombre del juego
+                    const gameLink = document.createElement('a');
+
+                    // Usar el nombre del juego para crear una URL única
+                    const gameName = row[0].replace(/\s+/g, '-').toLowerCase();
+                    gameLink.href = `${gameName}.html`; // Crear una página para cada juego
+
+                    gameLink.textContent = row[0]; // Nombre del juego
+
+                    // Insertar el enlace en la primera celda
+                    const newCell = newRow.insertCell();
+                    newCell.appendChild(gameLink);
+
+                    // Agregar las otras celdas (género, fecha, plataforma, calificación)
+                    row.slice(1).forEach((cell) => {
+                        const newCell = newRow.insertCell();
+                        newCell.textContent = cell;
+                    });
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

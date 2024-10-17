@@ -1,0 +1,113 @@
+header.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff; /* Le carré blanc */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optionnel : bordure pour mieux voir le carré */
+    height: 150px; /* Ajuster selon la taille du carré souhaité */
+}
+
+header img.title {
+    margin-right: 20px; /* Pour espacer l'image du texte */
+    height: 100px; /* Ajuste la taille de l'image */
+}
+
+header h1.title {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    height: 100%; /* Pour que le h1 prenne toute la hauteur du carré */
+}
+
+
+h1.title{
+    text-align: center;
+    text-decoration: underline;
+    color:  red;
+}
+p{
+    color:antiquewhite;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.225) !important;
+    padding: 20px;
+}
+button.sis {
+    background-color: green; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Taille du bouton */
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px; /* Arrondir les bords du bouton */
+    cursor: pointer;
+    margin: 20px auto; /* Espace autour du bouton et centré */
+    display: block; /* Le bouton prend toute la largeur disponible pour être centré */
+}
+
+button.sis:hover {
+    background-color: blue; /* Couleur du bouton lors du survol */
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}

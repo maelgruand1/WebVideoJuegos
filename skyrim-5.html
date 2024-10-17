@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyrim Page</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 22px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            text-align: left;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 40px;
+        }
+
+        .navbar a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        /* Button Styles */
+        .add-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .add-button:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        /* Content Section Styles */
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        /* Video Section */
+        .video-container {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #fun-fact img {
+            width: 60px;
+            margin: 10px;
+        }
+
+        #fun-fact {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="allGames.html">Ver Juegos</a></li>
+            </ul>
+        </nav>
+        <a href="tableForm.html">
+            <button class="add-button">Añadir Videojuego a la Tabla</button>
+        </a>
+    </header>
+
+    <main>
+        <h1>The Elder Scrolls V: Skyrim (2011)</h1>
+        <section id="description">
+            <h2>Descripción del Juego</h2>
+            <p><strong>The Elder Scrolls V: Skyrim</strong>, desarrollado por <em>Bethesda Game Studios</em>, es un videojuego de rol de acción lanzado en 2011. Ambientado en la provincia ficticia de Skyrim, el jugador asume el papel del "Dovahkiin", un héroe con la capacidad de absorber los poderes de los dragones. El juego ofrece un vasto mundo abierto lleno de misiones, facciones y secretos por descubrir.</p>
+        </section>
+
+        <section id="features">
+            <h2>Características Principales</h2>
+            <ul>
+                <li>Mundo abierto masivo con numerosas ciudades, mazmorras y áreas por explorar.</li>
+                <li>Sistema de habilidades basado en el uso y mejora de las capacidades del jugador.</li>
+                <li>Combate contra dragones, criaturas míticas y enemigos de todo tipo.</li>
+                <li>Facciones y misiones secundarias que ofrecen una rejugabilidad casi infinita.</li>
+                <li>Modding: soporte para modificaciones que expanden el juego con nuevo contenido.</li>
+            </ul>
+        </section>
+
+        <section id="trailer">
+            <h2>Trailer Oficial</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JSRtYpNRoN0" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="fun-fact">
+            <th><img src="descarga (1).png" alt=""></th>
+            <th><img src="descarga (3).png" alt=""></th>
+            <th><img src="descarga.png" alt=""></th>
+            <th><img src="descarga.jpg" alt=""></th>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de The Last of Us Part II</title>
+    <style>
+        /* Global Styles */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 22px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex; /* Utiliser flexbox pour aligner les éléments */
+            justify-content: space-between; /* Espacer les éléments */
+            align-items: center; /* Centrer verticalement */
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            text-align: left; /* Aligner le texte à gauche */
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex; /* Utiliser flexbox pour l'alignement */
+        }
+
+        .navbar li {
+            margin: 0 40px;
+        }
+
+        .navbar a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #3498db;
+        }
+
+        /* Button Styles */
+        .add-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .add-button:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        /* Content Section Styles */
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        /* Video Section */
+        .video-container {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Button for Fun Fact */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #fact {
+            margin-top: 10px;
+            color: #555;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="allGames.html">Ver Juegos</a></li>
+            </ul>
+        </nav>
+        <a href="tableForm.html">
+            <button class="add-button">Añadir Videojuego a la Tabla</button>
+        </a>
+    </header>
+
+    <header>
+        <h1>The Last of Us Part II (2020)</h1>
+    </header>
+
+    <section id="description">
+        <h2>Descripción del Juego</h2>
+        <p><strong>The Last of Us Part II</strong>, desarrollado por <em>Naughty Dog</em>, es un videojuego de acción y aventura lanzado en 2020. Es la secuela de <em>The Last of Us</em> y sigue la historia de Ellie, quien busca venganza en un mundo post-apocalíptico lleno de peligros y emociones profundas.</p>
+    </section>
+
+    <section id="features">
+        <h2>Características Principales</h2>
+        <ul>
+            <li>Historia emocionalmente intensa y narrativa profunda.</li>
+            <li>Mecánicas de combate mejoradas y exploración del mundo abierto.</li>
+            <li>Gráficos impresionantes y diseño de sonido envolvente.</li>
+            <li>Nuevo sistema de sigilo y personalización de armas.</li>
+            <li>Multijugador en línea con modos competitivos.</li>
+        </ul>
+    </section>
+
+    <section id="trailer">
+        <h2>Trailer Oficial</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JdE9U9WW_HM?si=epyhnfHHRRmgXPO1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        </div>
+    </section>
+
+    <section id="fun-fact">
+        <th><img src="descarga.jpg" alt="Playstation"></th>
+        <th><img src="descarga (3).png" alt="PC">
+    </section>
+
+
+    <script>
+        document.getElementById('showFact').addEventListener('click', function() {
+            var fact = document.getElementById('fact');
+            if (fact.style.display === 'none' || fact.style.display === '') {
+                fact.style.display = 'block';
+            } else {
+                fact.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

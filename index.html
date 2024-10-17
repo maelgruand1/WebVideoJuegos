@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio Web de Videojuegos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="consola.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="consola.png" alt="Logo" />
+      <h1 class="title">Web de Videojuegos</h1>
+    </header>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="allGames.html">Ver Juegos</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <a href="tableForm.html">
+        <button class="add-button">Añadir Videojuego a la Tabla</button>
+      </a>
+    </main>
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 30px;
+        font-size: 22px;
+      }
+
+      .header {
+        text-align: center;
+        background-color: #e74c3c; /* Couleur de fond du header */
+        padding: 20px 0;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        margin: 0;
+        font-size: 48px;
+        color: #ffffff; /* Couleur du texte du titre */
+        padding: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+      }
+
+      .navbar {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar li {
+        display: inline;
+        margin: 0 40px;
+      }
+
+      .navbar a {
+        color: #2980b9; /* Couleur des liens */
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+        color: red;
+      }
+
+      .add-button {
+        display: block;
+        margin: 50px auto;
+        padding: 20px 40px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        transition: background-color 0.3s, transform 0.3s;
+        text-decoration: none;
+      }
+
+      .add-button:hover {
+        background-color: #e74c3c;
+        transform: scale(1.2);
+      }
+    </style>
+  </body>
+</html>
